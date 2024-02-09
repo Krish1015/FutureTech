@@ -55,16 +55,34 @@ elif selected == "Open-Map View":
         locations_df = data[data['Latitude'].notnull() & data['Longitude'].notnull()]
         state = st.selectbox('Select State',data['State'].unique())
         city = st.selectbox('City',locations_df[locations_df['State']==state]['City'].unique())
+        state_df= locations_df[(locations_df['State'] == state)]
+        state_city_df = state_df[state_df['City'] == city]
+    
+        map_obj = folium.Map(location=[state_city_df['Latitude'].mean(), state_city_df['Longitude'].mean()], tiles='openstreetmap', zoom_start=11)
         
-          
-        state_df= locations_df[(locations_df['State'] == state) & (locations_df['City'] == city)]
-        map = folium.Map(location=[35.227,-80.843], tiles='openstreetmap', zoom_start=1)
-        for idx, row in state_df.iterrows():
+        for idx, row in state_city_df.iterrows():
             Marker(location=[row['Latitude'], row['Longitude']],
-                popup=row['Street Address']).add_to(map)
+                popup=row['Street Address']).add_to(map_obj)
+            
+        if st.button("Show Map"):
+            map_obj.save("map.html")
+            webbrowser.open("map.html")
+    
+    elif option == 'Cluster View':
+        locations_df = data[data['Latitude'].notnull() & data['Longitude'].notnull()]
+        nc_map = folium.Map(location=[locations_df['Latitude'].mean(), locations_df['Longitude'].mean()], tiles='openstreetmap', zoom_start=6)
+        mc = MarkerCluster()
+        for idx, row in locations_df.iterrows():
+            mc.add_child(Marker(location=[row['Latitude'], row['Longitude']],
+                                popup=row['Street Address']))
 
-        map.save("map.html")
-        webbrowser.open("map.html")
-
+        # add the marker cluster to the map
+        nc_map.add_child(mc)
+        
+        if st.button("Show Map"):
+            nc_map.save("map.html")
+            webbrowser.open("map.html")
+    else:
+        pass
         
                     
