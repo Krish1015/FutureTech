@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a67859f1c74456726dff8e1f2a53c7b5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a67859f1c74456726dff8e1f2a53c7b5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a67859f1c74456726dff8e1f2a53c7b5 = L.map(
+                "map_a67859f1c74456726dff8e1f2a53c7b5",
+                {
+                    center: [35.227, -80.843],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d478845a53df2a9fc6887e13f5761eb7 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_d478845a53df2a9fc6887e13f5761eb7.addTo(map_a67859f1c74456726dff8e1f2a53c7b5);
+        
+    
+            var marker_7daba33232b1f8369d5231530eab2756 = L.marker(
+                [34.2483191527193, -118.3879713743439],
+                {}
+            ).addTo(map_a67859f1c74456726dff8e1f2a53c7b5);
+        
+    
+        var popup_b43b03198ec608d6a824c615a3c33aa2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8928b52a94fdb49b74a7d6be6185e7d9 = $(`<div id="html_8928b52a94fdb49b74a7d6be6185e7d9" style="width: 100.0%; height: 100.0%;">11797 Truesdale St</div>`)[0];
+                popup_b43b03198ec608d6a824c615a3c33aa2.setContent(html_8928b52a94fdb49b74a7d6be6185e7d9);
+            
+        
+
+        marker_7daba33232b1f8369d5231530eab2756.bindPopup(popup_b43b03198ec608d6a824c615a3c33aa2)
+        ;
+
+        
+    
+    
+            var marker_6c029a1012c30eef38efa8afed7c57ca = L.marker(
+                [34.241928, -118.390147],
+                {}
+            ).addTo(map_a67859f1c74456726dff8e1f2a53c7b5);
+        
+    
+        var popup_b41f74d2d292e576bab057105c0083c0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_05f855a84b9c712e597da46d4a7323d4 = $(`<div id="html_05f855a84b9c712e597da46d4a7323d4" style="width: 100.0%; height: 100.0%;">11801 Sheldon St</div>`)[0];
+                popup_b41f74d2d292e576bab057105c0083c0.setContent(html_05f855a84b9c712e597da46d4a7323d4);
+            
+        
+
+        marker_6c029a1012c30eef38efa8afed7c57ca.bindPopup(popup_b41f74d2d292e576bab057105c0083c0)
+        ;
+
+        
+    
+    
+            var marker_451b87551ccd1f770d8a2800e22dd259 = L.marker(
+                [34.215022, -118.370958],
+                {}
+            ).addTo(map_a67859f1c74456726dff8e1f2a53c7b5);
+        
+    
+        var popup_ddb1a39a1da6b3e39b177daee7fee8b1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_67c2c413ea079d38ce455feed9345bdb = $(`<div id="html_67c2c413ea079d38ce455feed9345bdb" style="width: 100.0%; height: 100.0%;">7935 Vineland Ave.</div>`)[0];
+                popup_ddb1a39a1da6b3e39b177daee7fee8b1.setContent(html_67c2c413ea079d38ce455feed9345bdb);
+            
+        
+
+        marker_451b87551ccd1f770d8a2800e22dd259.bindPopup(popup_ddb1a39a1da6b3e39b177daee7fee8b1)
+        ;
+
+        
+    
+    
+            var marker_4a73d1b249bab72faa25f345608578c8 = L.marker(
+                [34.225334, -118.384372],
+                {}
+            ).addTo(map_a67859f1c74456726dff8e1f2a53c7b5);
+        
+    
+        var popup_88c8fa3fe07e24647e804cc84366a229 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_188638f725cced01a7e793b0bc73af7e = $(`<div id="html_188638f725cced01a7e793b0bc73af7e" style="width: 100.0%; height: 100.0%;">11571 Tuxford St</div>`)[0];
+                popup_88c8fa3fe07e24647e804cc84366a229.setContent(html_188638f725cced01a7e793b0bc73af7e);
+            
+        
+
+        marker_4a73d1b249bab72faa25f345608578c8.bindPopup(popup_88c8fa3fe07e24647e804cc84366a229)
+        ;
+
+        
+    
+    
+            var marker_0fc0b0e0b23bc8e4e08c791aad4d3734 = L.marker(
+                [34.213932, -118.373347],
+                {}
+            ).addTo(map_a67859f1c74456726dff8e1f2a53c7b5);
+        
+    
+        var popup_d0940a4be4424c23512e055c0be08437 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2da325dd6822b9cc3c3c275b3afc36c8 = $(`<div id="html_2da325dd6822b9cc3c3c275b3afc36c8" style="width: 100.0%; height: 100.0%;">11121 Arminta St</div>`)[0];
+                popup_d0940a4be4424c23512e055c0be08437.setContent(html_2da325dd6822b9cc3c3c275b3afc36c8);
+            
+        
+
+        marker_0fc0b0e0b23bc8e4e08c791aad4d3734.bindPopup(popup_d0940a4be4424c23512e055c0be08437)
+        ;
+
+        
+    
+    
+            var marker_ea73ed3dd909a23737e575cab7e50656 = L.marker(
+                [34.217851, -118.36853],
+                {}
+            ).addTo(map_a67859f1c74456726dff8e1f2a53c7b5);
+        
+    
+        var popup_9879f61a6d65e5a2f26d9c1842ccac89 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5aa685de47f7548ac6a3455608090148 = $(`<div id="html_5aa685de47f7548ac6a3455608090148" style="width: 100.0%; height: 100.0%;">8124 Ratner St</div>`)[0];
+                popup_9879f61a6d65e5a2f26d9c1842ccac89.setContent(html_5aa685de47f7548ac6a3455608090148);
+            
+        
+
+        marker_ea73ed3dd909a23737e575cab7e50656.bindPopup(popup_9879f61a6d65e5a2f26d9c1842ccac89)
+        ;
+
+        
+    
+</script>
+</html>
